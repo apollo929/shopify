@@ -1,0 +1,211 @@
+div.product_top .certification {
+    text-align: center;
+    clear: both;
+    padding-top: 30px;
+    overflow: hidden;
+}
+div.product_top .certification span {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 17px;
+    line-height: 34px;
+    vertical-align: top;
+    font-family: Muli,Arial,sans-serif;
+    color: #272b65;
+    font-weight: 400;
+    letter-spacing: .1em;
+    padding-bottom: 3px;
+}
+div.product_top .certification ul, div.product_top .certification ul li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+div.product_top .certification ul li.bis {
+    background-position: -298px 0;
+    width: 70px;
+}
+div.product_top .certification ul li {
+    height: 31px;
+    position: relative;
+    background: url(diamond-certificate.png) left top no-repeat;
+    text-indent: 100%;
+    overflow: hidden;
+    margin: 0 9px;
+}
+
+div.product_top .certification ul li>span {
+    display: block;
+    height: 100%;
+    cursor: pointer;
+}
+
+div.product_top .certification ul li:after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    width: 1px;
+    background: #e2e2e2;
+    height: 24px;
+    top: 50%;
+    right: -10px;
+    margin-top: -12px;
+}
+
+div.product_top .certification ul li.sgl {
+    background-position: -374px 0;
+    width: 62px;
+}
+div.product_top .certification span {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 17px;
+    line-height: 34px;
+    vertical-align: top;
+    font-family: Muli,Arial,sans-serif;
+    color: #272b65;
+    font-weight: 400;
+    letter-spacing: .1em;
+    padding-bottom: 3px;
+}
+div.product_top .certification ul li.igi {
+    background-position: -97px 0;
+    width: 36px;
+}
+.nopadding {
+    padding-left: 0!important;
+    padding-right: 0!important;
+}
+#bs-promise-wrapper .bs-promise {
+    clear: both;
+    color: #333;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center;
+    padding: 6px 0;
+    font-family: Muli,Arial,sans-serif;
+    font-weight: 500;
+}
+#bs-promise-wrapper .bs-promise ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: table;
+    width: 100%;
+}
+#bs-promise-wrapper .bs-promise ul .border-right {
+    border-right: 0.5px solid lightgrey;
+    padding: 2% 0;
+}
+#bs-promise-wrapper .bs-promise ul li {
+    display: table-cell;
+}
+#bs-promise-wrapper .bs-promise ul li>span {
+    color: #333;
+    font-size: 12px;
+    line-height: 18px;
+    padding: 5px 0;
+    text-decoration: none;
+    cursor: pointer;
+}
+#bs-promise-wrapper .bs-promise ul .certified, 
+#bs-promise-wrapper .bs-promise ul .exchange, 
+#bs-promise-wrapper .bs-promise ul .money-back {
+    display: inline-block;
+    background: url(bp-promises-icon.v1.png) no-repeat;
+    overflow: hidden;
+    vertical-align: bottom;
+    text-align: left;
+}
+#bs-promise-wrapper .bs-promise ul li>span span {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: initial;
+    letter-spacing: 0;
+}
+#bs-promise-wrapper .bs-promise ul .exchange {
+    background-position: -3px -22px;
+    width: 18px;
+    height: 19px;
+}
+#bs-promise-wrapper .bs-promise ul .certified {
+    background-position: -3px 0;
+    width: 18px;
+    height: 19px;
+}
+#bs-promise-wrapper .bs-promise ul .money-back {
+    background-position: -3px -44px;
+    width: 18px;
+    height: 16px;
+}
+#bs-promise-wrapper .txt-call-now {
+    color: #333;
+    font-family: Muli,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    letter-spacing: 0;
+    margin-top: 16px;
+    margin-bottom: 7px;
+    text-align: center;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+
+
+          <div class="certification"> 
+            <span>Certified By</span> 
+            <ul> 
+              <li class="bis">
+                <span class="prcs-d" data-p="bis,bsc" title="Bureau of Indian Standards- HALLMARKING">BIS</span>
+              </li> 
+              <li class="sgl">
+                <span class="prcs-d" data-p="sgl,bsc" title="Solitaire Gemological Laboratories">SGL</span>
+              </li> 
+              <li class="igi">
+                <span class="prcs-d center" data-p="igi,bsc" title="International Gemological Institute">IGI</span>
+              </li> 
+            </ul> 
+          </div>
+
+
+
+/////////////////////////////////////////////////////////////////////////////
+
+
+          
+           <div class="nopadding col-xs-11" id="bs-promise-wrapper"> 
+              <div class="bs-promise"> 
+                <ul> 
+                  <li class="border-right">
+                    <span class="prcs-d" data-p="30-day-return,bsp" title="30-Day Money Back">
+                      <div class="money-back"></div> 
+                      <span> 30 -Day <br>Money Back</span>
+                    </span>
+                  </li> 
+                  <li class="border-right">
+                    <span class="prcs-d" data-p="lifetime-exchange,bsp" title="Lifetime Exchange">
+                      <div class="exchange"></div> 
+                      <span>Lifetime Exchange &amp; Buy-Back</span>
+                    </span>
+                  </li> 
+                  <li>
+                    <span class="prcs-d" data-p="certifications,bsp" title="Certified Jewellery">
+                      <div class="certified"></div> 
+                      <span>Certified <br>Jewellery</span>
+                    </span>
+                  </li> 
+                </ul> 
+              </div> 
+              <div class="col-xs-11"> 
+                <div class="txt-call-now"> 
+                  <span>Any Questions? Please feel free to reach us at:</span> 
+                  <strong>1800-419-0066</strong> 
+                </div> 
+              </div> 
+            </div>
+          
+          	

@@ -1,0 +1,45 @@
+1) We will use a live gold price editor app to edit prices for each variant. App link: https://apps.shopify.com/live-gold-price-editor
+2) In that app we will add diamond price and gold weight etc. App also gives metafields do we want to show the details from that app in specific metafield
+3) If some item have gemstone only then we want gemstone metafield to show
+4) For example if a ring has no diamond, then the diamond metafield is hidden and it only shows gold details. We will tell you for which is what
+5) Metafields change for each variation selected. for example if someone chooses big size ring and it has more gold, it shows more gold of tha metafield from price edito app.
+
+6) Examples:
+1) Gemstone jewelry shows gemstone & gold details: https://tinyurl.com/ycxcf5np
+2) gold jewelry shows only gold details:https://tinyurl.com/2p944dpb
+3) Jewelry with diamonds shows diamond and gold details:https://tinyurl.com/4v86dp8m
+
+
+
+
+
+
+shopData
+gold_price_14k: 100
+gold_price_18k: 200
+gold_price_22k: 350
+gold_price_24k: 500
+last_updated_on: 1645342459393
+last_updated_on_text: "2/20/2022, 7:34:19 AM"
+making_charges_discount: 2
+platinum_price: 150
+refresh_status: 0
+show_discounted_prices: true
+silver_price: 90
+total_variants: 10
+
+goldData
+compare_price_margin: ""
+diamond_charges: 567
+insurance_charges: 2
+making_charges: 14
+markup_percentage: ""
+metal_type: "gold"
+metal_weight: 2.51
+misc_charges: 40
+purity: "22K"
+remarks: ""
+stone_charges: 234
+tax: 4
+wastage_charges: 2
+

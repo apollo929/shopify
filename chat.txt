@@ -1,0 +1,3 @@
+Yesterday, I removed product metafields in product admin page becasue you said you didn't need product detail box.
+if you add product meta fields, my code will be ok.
+theme setting/ Metafields/Product

@@ -1,0 +1,131 @@
+<ul class="nav tab-horizontal" role="tablist">
+             {% if section.settings.display_product_detail_description %}
+                <li class="nav-item tab">
+                    <a href="#collapse-tab1" class="tab-title active" role="tab" data-toggle="tab" aria-controls="tab1">
+                        {{ section.settings.product_description_title }}
+                    </a>
+                </li>
+            {% endif %}
+            {% if section.settings.display_product_review_tab %}
+               <li class="nav-item tab">
+                    <a href="#collapse-tab2" class="tab-title" role="tab" data-toggle="tab" aria-controls="tab2">
+                        {{ section.settings.product_review_title }}
+                    </a>
+                </li>
+            {% endif %}
+
+            {% for block in section.blocks %}
+            {% if block.type == 'product_tab' %}
+                {% if block.settings.type_tab == 'custom' %}
+                    {% assign content = block.settings.product_tab_content_2 %}
+                    {% if product.metafields.c_f[content] != blank %}
+                        <li class="nav-item tab">
+                            <a href="#{{ block.id }}" class="tab-title" role="tab" data-toggle="tab" aria-controls="{{ block.id }}">
+                                {{ block.settings.product_tab_title }}
+                            </a>
+                        </li>
+                    {% endif %}
+                {% else %}
+                    <li class="nav-item tab">
+                        <a href="#{{ block.id }}" class="tab-title" role="tab" data-toggle="tab" aria-controls="{{ block.id }}">
+                            {{block.settings.product_tab_title }}
+                        </a>
+                    </li>
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+    </ul>
+<div class="tab-content horizontal">
+        <div class="container">
+            {% if section.settings.display_product_detail_description %}
+                <div id="collapse-tab1" class="tab-description tab-pane fade show active" role="tabpanel">
+                    <div class="toggle-title">
+                        <a class="toggleLink" data-toggle="collapse" href="#tab1_mobile">
+                            <span class="page-heading">
+                               {{section.settings.product_description_title}}
+                            </span>
+                            {% render 'icon-chevron-up' %}
+                        </a>
+                    </div>
+                    <div class="toggle-content collapse show" id="tab1_mobile">
+                        {% assign des = product.description %}
+                            <div>
+                               {{product.metafields.my_fields.product_height}} {{ des}}
+                            </div>
+                            {% if section.settings.enable_lookbook_gallery %}
+                                {% render 'product-detail-gallery_lookbook' %}
+                            {% endif %}
+                        
+                        <div class="description_showmore">
+                            <div class="showmore show">
+                                <span class="btn btn--secondary">{{ 'general.filters.show_more' | t }}</span>
+                            </div>
+                            <div class="showless hide">
+                                <span class="btn btn--secondary">{{ 'general.filters.show_less' | t }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+            {% if section.settings.display_product_review_tab %}
+                <div id="collapse-tab2" class="tab-review tab-pane fade " role="tabpanel">
+                    <div class="toggle-title">
+                        <a class="toggleLink collapsed" data-toggle="collapse" href="#tab2_mobile">
+                            <span class="page-heading">
+                            {{ section.settings.product_review_title }}
+                            {% render 'icon-chevron-up' %}
+                        </a>
+                    </div>
+                    <div class="toggle-content collapse" id="tab2_mobile">
+                        <div id="shopify-product-reviews" data-id="{{product.id}}">
+                            {{ product.metafields.spr.reviews }}
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+
+            {% for block in section.blocks %}
+            {% if block.type == 'product_tab' %}
+                {% if block.settings.type_tab == 'custom' %}
+                    {% assign content = block.settings.product_tab_content_2 %}
+                    
+                    {% if product.metafields.c_f[content] != blank %}
+                        <div id="{{ block.id }}" class="tab-pane fade" role="tabpanel">
+                            <div class="toggle-title">
+                                <a class="toggleLink collapsed" data-toggle="collapse" href="#{{ block.id }}_mobile">
+                                    <span class="page-heading">
+                                        {{block.settings.product_tab_title}}
+                                    </span>
+                                    {% render 'icon-chevron-up' %}
+                                </a>
+                            </div>
+                            <div class="toggle-content collapse" id="{{ block.id }}_mobile">
+                                {% assign metafieldsTabContent = product.metafields.c_f[content] %}
+                                <div>
+                                    {{ metafieldsTabContent}}
+                                </div>
+                            </div>
+                        </div>
+                    {% endif %}
+                {% else %}
+                    <div id="{{ block.id }}" class="tab-pane fade" role="tabpanel">
+                        <div class="toggle-title">
+                            <a class="toggleLink collapsed" data-toggle="collapse" href="#{{ block.id }}_mobile">
+                                <span class="page-heading">
+                                    {{block.settings.product_tab_title}}
+                                 </span>
+                                {% render 'icon-chevron-up' %}
+                            </a>
+                        </div>
+                        <div class="toggle-content collapse" id="{{ block.id }}_mobile">
+                            {% assign customTabContent = block.settings.product_tab_content %}
+                            <div>
+                                {{ customTabContent | split: '[lang2]' | first }}
+                            </div>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>

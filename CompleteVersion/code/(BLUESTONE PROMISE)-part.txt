@@ -1,0 +1,279 @@
+#details-middle{
+      padding:30px;
+    }
+    #details-middle #details-middle-left-inner {
+        background-color: white;
+        border: 1px solid #f0f0f0;
+        padding: 8px 16px 16px 16px;
+        font-family: Muli,Arial,sans-serif;
+    }
+    #details-middle #item-details section {
+        margin-bottom: 1px;
+    }
+    #details-middle h2.title {
+        background: #f9f9f9;
+        border-top: 1px solid #d1d1d1;
+        color: black;
+        font-size: 15px;
+        line-height: 21px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: .1em;
+        margin: 0;
+        padding: 8px 8px 5px 8px;
+        text-transform: uppercase;
+    }
+    #details-middle #section-item-details h2.title {
+        background: 0;
+        color: black;
+        border: 0;
+    }
+    #details-middle #item-details #section-item-details .content {
+      display: block!important;
+      height: 100%!important;
+      border-top: 0;
+      overflow: hidden;
+  	}
+    #details-middle dl {
+        clear: both;
+        overflow: hidden;
+        border-bottom: 1px solid #f0f0f0;
+        margin: 0;
+        color: #4476b2;
+        padding: 3px 8px 5px 8px;
+        font-family: Muli,Arial,sans-serif;
+        font-size: 12px;
+        line-height: 18px;
+        line-height: 19px;
+    }
+    dl dt {
+        width: 50%;
+        float: left;
+        font-weight: 500;
+    }
+    #details-middle dl dd {
+        text-align: right;
+        letter-spacing: 1px;
+      	margin-bottom:0;
+    }
+    #details-middle dl dd, #details-middle dl dt {
+        width: 50%;
+        float: left;
+        font-weight: 500;
+    }
+    #details-middle h2.title i {
+        float: right;
+        font-size: 13px;
+        margin-right: 17px;
+        padding-top: 2px;
+        color: #4a4a4a;
+    }
+    #detail-middle-right #details-middle-right-inner .bs-promise ul li{
+    
+    	padding:0;
+    }
+
+    #details-middle h2.expanded:after {
+      content: '\002B';
+        color: #777;
+        float: right;
+        margin-right: 5px;
+        font-size: 19px;
+        font-weight: 400;
+        color: black;
+    }
+
+    #details-middle h2.active:after {
+      content: "\2212";
+    }
+
+    #details-middle #item-details section div.panel {
+   
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    
+
+    .bs-promise-container {
+        background-color: #f9f9f9;
+        border: 1px solid #f0f0f0;
+        margin-bottom: 12px;
+        padding-bottom: 0!important;
+        overflow: hidden;
+    }
+    .bs-promise-container h2.title-9, .bs-promise-container .build-solitaire-container #choose-solitaire h2.title, .build-solitaire-container #choose-solitaire .bs-promise-container h2.title, .bs-promise-container .solitaire-list-page #choose-solitaire h2.title, .solitaire-list-page #choose-solitaire .bs-promise-container h2.title {
+        border: 0;
+        color: black;
+        font-family: Muli,Arial,sans-serif;
+        letter-spacing: .1em;
+        margin: 0;
+        padding: 6px 0;
+      	font-size:15px;
+    }
+    .bs-promise-container .bs-promise {
+        font-family: Muli,Arial,sans-serif;
+        background-color: #f9f9f9;
+        clear: both;
+        letter-spacing: .04em;
+    }
+   	.bs-promise-container{
+      padding: 10px 25px;
+    }
+    .clear {
+        clear: both;
+        display: block;
+        height: 0;
+        width: 100%;
+        visibility: hidden;
+    }
+    .bs-promise-container ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .bs-promise-container ul li {
+        width: 33.33%;
+        float: left;
+        text-transform: uppercase;
+        min-height: 37px;
+        text-align: left;
+        white-space: nowrap;
+    }
+    .bs-promise-container ul li>span {
+        color: #f15d47;
+        text-decoration: none;
+        cursor: pointer;
+    }
+    .bs-promise-container ul li>span span {
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 10px;
+        line-height: 16px;
+        font-weight: 500;
+    }
+    .bs-promise-container ul li {
+      width: 33.33%;
+      float: left;
+      text-transform: uppercase;
+      min-height: 37px;
+      text-align: left;
+    }
+    .bs-promise-container ul li>span i {
+        color: #4476b2;
+        display: inline-block;
+        padding-right: 4px;
+        vertical-align: middle;
+        font-size: 14px;
+        line-height: 22px;
+    }
+#details-middle-right-inner #certificaton {
+        background-color: #9babc4;
+        border: 1px solid #f0f0f0;
+      	padding: 10px 25px;
+    }
+ 
+    #details-middle-right-inner #certificaton span.title {
+        display: block;
+        text-align: center;
+        text-transform: uppercase;
+        color: #272b65;
+        font-weight: bold;
+        padding: 16px 0 21px 0;
+        font-size: 16px;
+        line-height: 21px;
+      	font-family: 'icomoon' !important;
+    }
+    #details-middle-right-inner #certificaton .content {
+        color: white;
+        text-align: center;
+        padding-bottom: 12px;
+      	font-size: 14px;
+      	font-family : 'icomoon';
+    }
+@media (max-width: 550px) {
+  #detail-middle-right #details-middle-right-inner .bs-promise ul li{
+    width: 50%;
+    padding:0;
+  }
+  #detail-middle-right #details-middle-right-inner .bs-promise-container{
+    padding: 10px 10px;
+  }
+}
+@media (min-width: 770px) and (max-width: 1060px) {
+  #detail-middle-right #details-middle-right-inner .bs-promise ul li{
+    width: 50% !important;
+    max-width : 50%;
+  }
+}
+    
+
+////////////////////////////////////////////////////////////////////////////////
+
+
+
+  <div class="col-md-6 tab-panel">
+    <div class="row middle-detail-product" id="details-middle">
+      <div id="detail-middle-right">
+        <div id="details-middle-right-inner">
+          <div class="bs-promise-container"> 
+              <h2 class="title-9">Bluestone Promise</h2> 
+              <div class="bs-promise"> 
+                  <ul> 
+                      <li class="col-md-4">
+                          <span class="prcs-d" data-p="30-day-return,bsp" title="30-Day Money Back">
+                              <i class="fas fa-sign-out-alt fa-fw"></i> 
+                              <span> 30-Day Money Back</span>
+                          </span>
+                      </li> 
+                      <li class="col-md-4">
+                          <span class="prcs-d" data-p="lifetime-exchange,bsp" title="Lifetime Exchange">
+                              <i class="fas fa-globe fa-fw"></i>
+                              <span>Lifetime Exchange<br>&amp; Buy-Back Policy</span>
+                          </span>
+                      </li> 
+                      <li class="col-md-4">
+                          <span class="prcs-d" data-p="certifications,bsp" title="Certified Jewellery">
+                              <i class="fa fa-solid fa-award"></i>
+                              <span>Certified Jewellery</span>
+                          </span>
+                       </li> 
+                      <li class="col-md-4">
+                        <span class="prcs-d" data-p="refund,bsp" title="100% Refund">
+                          <i class="fa fa-solid fa-thumbs-up"></i>
+                          <span>100% Refund</span>
+                        </span>
+                      </li> 
+                      <li class="col-md-4">
+                        <span class="prcs-d" data-p="free-shipping,bsp" title="Free Shipping">
+                          <i class="fa fa-solid fa-taxi"></i>
+                          <span>Free Shipping</span>
+                        </span>
+                      </li> 
+                      <li class="col-md-4">
+                        <span class="prcs-d" data-p="free-returns,bsp" title="Free Returns">
+                          <i class="fa fa-heart fa-fw"></i>
+
+                          <span>Free Returns</span>
+                        </span>
+                      </li> 
+                  	</ul> 
+                  <div class="clear"></div> 
+              </div> 
+              <div class="clear"></div> 
+          </div>
+          <section id="certificaton" class="clearfix"> 
+              <span class="title">Certificate of Authenticity</span> 
+              <div class="content"> 
+                  Every piece of jewellery that we <br>make is certified for authenticity by<br> 
+                  third-party international laboratories<br> like <strong>SGL</strong>, 
+                  <strong>IGI</strong>, <strong>BIS</strong>, <strong>GIA</strong>, 
+                  and <strong>HKD</strong>. 
+              </div> 
+          </section>
+        </div>
+      </div>
+     
+    </div>
+  </div>

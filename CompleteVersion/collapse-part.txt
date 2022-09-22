@@ -1,0 +1,294 @@
+ <div id="detail-middle-left" class="col-md-7">
+        <div id="details-middle-left-inner">
+          <div id="item-details">
+            <section id="section-item-details">
+              <h2 class="title">Product Details</h2>
+              <div class="content" style="display: none;"> 
+                <dl> 
+                  <dt>Product Code</dt> 
+                  {%- assign current_variant = product.selected_or_first_available_variant -%}
+                  <dd class="last" id="detail-product-code">{{current_variant.sku}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Height</dt> 
+                  {%- assign current_product_height = product.metafields.my_fields.product_height -%}
+                  <dd class="last">{{current_product_height | round : 2}} mm</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Width</dt> 
+                  {%- assign current_product_width = product.metafields.my_fields.product_width -%}
+                  <dd class="last">{{current_product_width | round : 2}} mm</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Product Weight (Approx)</dt> 
+                  <dd class="last" id="product_total_weight">{{ product.variants.first.weight | weight_with_unit }}</dd> 
+                </dl> 
+              </div>
+            </section>
+            <section id="preSetSolitaire-details">
+              <h2 class="title expanded">
+                Solitaire Details   
+              </h2>
+              <div class="panel"> 
+                <dl> 
+                  <dt>Total Weight</dt> 
+                  {%- assign current_solitaire_weight = product.metafields.my_fields.solitaire_weight -%}
+                  <dd class="last" id="preSetSolitaireCarat">{{current_solitaire_weight | round:2}} Ct</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Total No. of Solitaires</dt>
+                  {%- assign current_solitaire_no = product.metafields.my_fields.solitaire_no -%}
+                  <dd class="last">{{current_solitaire_no}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Shape</dt> 
+                  {%- assign current_solitaire_shape = product.metafields.my_fields.solitaire_shape -%}
+                  <dd class="last" id="preSetSolitaireShape">{{current_solitaire_shape}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Clarity</dt> 
+                  <dd class="last" id="preSetSolitaireClarity">{{product.metafields.my_fields.solitaire_clarity}}</dd> 
+                </dl>
+                <dl> 
+                  <dt>Color</dt> 
+                  <dd class="last" id="preSetSolitaireColor">{{product.metafields.my_fields.solitaire_color1}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Cut-Polish-Symmetry</dt> 
+                  <dd class="last">{{product.metafields.my_fields.solitaire_cut_polish_symmetry}}</dd> 
+                </dl>  
+              </div>
+
+            </section>
+            <section id="stone-details" class="detail-with-diamond">
+              <h2 class="title expanded">
+                DIAMOND DETAILS  
+              </h2>
+              <div class="panel-fix">
+                <dl> 
+                  <dt>Total Weight</dt>
+                  {%- assign current_diamond_weight = product.metafields.my_fields.diamond_weight -%}
+                  <dd class="last">{{current_diamond_weight | round : 3}} Ct</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Total No. Of Diamonds</dt> 
+                  <dd class="last">{{product.metafields.my_fields.diamond_no}}</dd> 
+                </dl> 
+              </div>
+              
+              <div class="panel"> 
+                <dl> 
+                  <dt>Clarity</dt> 
+                  <dd class="last">{{product.metafields.my_fields.diamond_clarity}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Color</dt> 
+                  <dd class="last">{{product.metafields.my_fields.diamond_color}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>No. Of Diamonds</dt> 
+                  <dd class="last">{{product.metafields.my_fields.diamond_no}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Shape</dt> 
+                  <dd class="last">{{product.metafields.my_fields.diamond_shape}}</dd> 
+                </dl>
+                <dl> 
+                  <dt>Total Weight</dt> 
+                  <dd class="last">{{product.metafields.my_fields.diamond_weight | round:3}} carats</dd> 
+                </dl> 
+              </div>
+
+            </section>
+            <section id="metal-details">
+              <h2 class="title expanded">
+                METAL DETAILS  
+              </h2>
+              <div class="panel"> 
+                <dl> 
+                  <dt>Type</dt> 
+                  <dd class="last">{{product.metafields.my_fields.metal_type1}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Weight(Approx)</dt> 
+                  <dd class="last">{{product.metafields.my_fields.metal_weight | round:2}} gram</dd> 
+                </dl> 
+              </div>
+
+            </section>
+            <section id="section-price-breakup">
+              <h2 class="title expanded">
+                PRICE BREAKUP  
+              </h2>
+              <div class="panel"> 
+                <dl> 
+                  <dt>Gold</dt> 
+                  <dd class="last">${{product.metafields.my_fields.price_gold | round:2}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Diamond</dt> 
+                  <dd class="last">${{product.metafields.my_fields.price_diamond | round:2}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Solitaire</dt> 
+                  <dd class="last">${{product.metafields.my_fields.price_solitaire | round:2}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Making Charge</dt> 
+                  <dd class="last">${{product.metafields.my_fields.price_making_charge | round:2}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>GST</dt> 
+                  <dd class="last">${{product.metafields.my_fields.price_gst | round:2}}</dd> 
+                </dl> 
+                <dl> 
+                  <dt>Total</dt> 
+                  {%- assign current_price_total = product.metafields.my_fields.price_gold | plus:product.metafields.my_fields.price_diamond | plus:product.metafields.my_fields.price_solitaire | plus:product.metafields.my_fields.price_making_charge | plus:product.metafields.my_fields.price_gst -%}
+                  <dd class="last">${{current_price_total | round:2}}</dd> 
+                </dl> 
+              </div>
+
+            </section>
+            <section id="section-price-breakup">
+              <h2 class="title expanded">
+                TAGS  
+              </h2>
+              <div class="panel"> 
+                <p class="tags-list">
+                  {% for tag in product.tags %}
+                  <a href="/collections/all/{{ tag | handleize }}">
+                    <span clsas="el-icon-tag">{{ tag }}</span>
+                  </a>
+                  {% endfor %}
+                </p>
+              </div>
+
+            </section>
+           
+          </div>
+        </div>
+      </div>
+
+/////////////////////////////// script //////////////////////////////////
+
+  <script>
+      
+    var acc = $('#item-details section h2.expanded');
+	var i;
+
+    for (i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        
+        if($(this).next().hasClass('panel')){
+          var panel = this.nextElementSibling;
+        }else{
+          var panel = this.nextElementSibling.nextElementSibling;
+        }
+
+        if (panel.style.maxHeight) {
+          panel.style.maxHeight = null;
+        } else {
+          panel.style.maxHeight = panel.scrollHeight + "px";
+        } 
+      });
+    }
+  </script>
+
+
+////////////////////////////// css /////////////////////////////////
+
+	#details-middle{
+      padding:30px;
+    }
+    #details-middle #details-middle-left-inner {
+        background-color: white;
+        border: 1px solid #f0f0f0;
+        padding: 8px 16px 16px 16px;
+        font-family: Muli,Arial,sans-serif;
+    }
+    #details-middle #item-details section {
+        margin-bottom: 1px;
+    }
+    #details-middle h2.title {
+        background: #f9f9f9;
+        border-top: 1px solid #d1d1d1;
+        color: black;
+        font-size: 15px;
+        line-height: 21px;
+        font-weight: 600;
+        line-height: 20px;
+        letter-spacing: .1em;
+        margin: 0;
+        padding: 8px 8px 5px 8px;
+        text-transform: uppercase;
+    }
+    #details-middle #section-item-details h2.title {
+        background: 0;
+        color: black;
+        border: 0;
+    }
+    #details-middle #item-details #section-item-details .content {
+      display: block!important;
+      height: 100%!important;
+      border-top: 0;
+      overflow: hidden;
+  	}
+    #details-middle dl {
+        clear: both;
+        overflow: hidden;
+        border-bottom: 1px solid #f0f0f0;
+        margin: 0;
+        color: #4476b2;
+        padding: 3px 8px 5px 8px;
+        font-family: Muli,Arial,sans-serif;
+        font-size: 12px;
+        line-height: 18px;
+        line-height: 19px;
+    }
+    dl dt {
+        width: 50%;
+        float: left;
+        font-weight: 500;
+    }
+    #details-middle dl dd {
+        text-align: right;
+        letter-spacing: 1px;
+      	margin-bottom:0;
+    }
+    #details-middle dl dd, #details-middle dl dt {
+        width: 50%;
+        float: left;
+        font-weight: 500;
+    }
+    #details-middle h2.title i {
+        float: right;
+        font-size: 13px;
+        margin-right: 17px;
+        padding-top: 2px;
+        color: #4a4a4a;
+    }
+    
+
+    #details-middle h2.expanded:after {
+      content: '\002B';
+        color: #777;
+        float: right;
+        margin-right: 5px;
+        font-size: 19px;
+        font-weight: 400;
+        color: black;
+    }
+
+    #details-middle h2.active:after {
+      content: "\2212";
+    }
+
+    #details-middle #item-details section div.panel {
+   
+      background-color: white;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+    }
+    
